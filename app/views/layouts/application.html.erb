@@ -8,6 +8,11 @@
 </head>
 <body>
 
+  <ul>
+  <%= session[:user_id] %>
+  <li><%= link_to "Logout", logout_path, method: 'delete'%></li>
+  </ul>
+
 <%= yield %>
 
 </body>
