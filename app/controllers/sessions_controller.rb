@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :name
-    redirect_to '/sessions/new' #logout will actually be a submit button that we style to look like a link
+    redirect_to '/users/new' #logout will actually be a submit button that we style to look like a link
   end
 
 end

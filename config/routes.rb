@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
+  #resources :users
+
+  get "/users", to: "users#index"
+  get "/users/new", to: "users#new", as: "new_user"
+  post "/users", to: "users#create"
+  get "/users/:id", to: "users#show", as: "user"
+  get "/users/:id/edit", to: "users#edit", as: "edit_user"
+  patch "/users/:id", to: "users#update"
+  delete "/users/:id", to: "users#destroy", as: "delete"
 
   get "/sessions/new", to: "sessions#new", as: "login"
   post "/sessions", to: "sessions#create", as: "sessions"
